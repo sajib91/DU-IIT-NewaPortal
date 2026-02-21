@@ -24,17 +24,21 @@ async function fetchArticles() {
 
             const card = document.createElement('div');
             card.className = 'article-card';
+            
+            // We wrap the entire card inside an anchor tag passing the ID in the URL
             card.innerHTML = `
-                <img src="${image}" alt="Article Image" class="card-image">
-                <div class="card-content">
-                    <span class="category-badge">${article.category.name}</span>
-                    <h3 class="card-title">${article.title}</h3>
-                    <p class="card-excerpt">${article.content.substring(0, 100)}...</p>
-                    <div class="card-footer">
-                        <span>By ${article.author.name}</span>
-                        <span>${date}</span>
+                <a href="article.html?id=${article.id}" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
+                    <img src="${image}" alt="Article Image" class="card-image">
+                    <div class="card-content">
+                        <span class="category-badge">${article.category.name}</span>
+                        <h3 class="card-title">${article.title}</h3>
+                        <p class="card-excerpt">${article.content.substring(0, 100)}...</p>
+                        <div class="card-footer">
+                            <span>By ${article.author.name}</span>
+                            <span>${date}</span>
+                        </div>
                     </div>
-                </div>
+                </a>
             `;
             container.appendChild(card);
         });
