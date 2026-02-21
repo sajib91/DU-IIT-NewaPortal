@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <span class="logo">Admin<span>Panel</span></span>
+            <div class="nav-links">
+                <a href="index.html">View Live Site</a>
+                <a href="#" id="logout-btn" style="color: #ef4444;">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="form-card" style="max-width: 800px;">
+            <h2 style="margin-bottom: 1.5rem;">Publish Article</h2>
+            <div id="status-alert" class="alert"></div>
+            
+            <form id="article-form">
+                <div class="form-group">
+                    <label>Headline Title</label>
+                    <input type="text" id="title" class="form-control" required>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label>Category ID (1-4)</label>
+                        <input type="number" id="categoryId" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Image URL (Optional)</label>
+                        <input type="url" id="imageUrl" class="form-control">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Content</label>
+                    <textarea id="content" class="form-control" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-submit" style="background-color: #10b981;">Publish Now</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>
