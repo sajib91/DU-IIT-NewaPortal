@@ -4,6 +4,10 @@
 
  <img width="1500" height="1000" alt="image" src="https://github.com/user-attachments/assets/3cf1ef6b-9c22-44e7-8625-d44a155de9d1" />
 
+ <img width="1500" height="1000" alt="image" src="https://github.com/user-attachments/assets/cef6ed2f-6396-42d9-9931-d9998db8a34d" />
+
+
+
 ## 🚀 Tech Stack
 
 **Frontend:**
